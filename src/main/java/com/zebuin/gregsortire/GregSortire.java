@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.zebuin.gregsortire;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
@@ -22,15 +22,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(ExampleMod.MOD_ID)
+@Mod(GregSortire.MOD_ID)
 @SuppressWarnings("removal")
-public class ExampleMod {
+public class GregSortire {
 
-    public static final String MOD_ID = "examplemod";
+    public static final String MOD_ID = "greg_sortire";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static GTRegistrate EXAMPLE_REGISTRATE = GTRegistrate.create(ExampleMod.MOD_ID);
+    public static GTRegistrate EXAMPLE_REGISTRATE = GTRegistrate.create(GregSortire.MOD_ID);
 
-    public ExampleMod() {
+    public GregSortire() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
@@ -81,7 +81,7 @@ public class ExampleMod {
      * @param event
      */
     private void addMaterialRegistries(MaterialRegistryEvent event) {
-        GTCEuAPI.materialManager.createRegistry(ExampleMod.MOD_ID);
+        GTCEuAPI.materialManager.createRegistry(GregSortire.MOD_ID);
     }
 
     /**
